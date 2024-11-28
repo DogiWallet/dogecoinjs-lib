@@ -14,25 +14,29 @@ interface Bip32 {
   private: number;
 }
 
-export const bellcoin: Network = {
-  messagePrefix: 'Bells Signed Message:\n',
-  bech32: 'bel',
+
+export const dogecoin: Network = {
+  messagePrefix: '\x19Dogecoin Signed Message:\n',
+  bech32: 'doge',
   bip32: {
     public: 0x02facafd,
     private: 0x02fac398,
   },
-  pubKeyHash: 25,
-  scriptHash: 30,
-  wif: 0x99,
-};
-export const testnet: Network = {
-  messagePrefix: 'Bells Signed Message:\n',
-  bech32: 'tbel',
-  bip32: {
-    public: 0x02facafd,
-    private: 0x02fac398,
-  },
-  pubKeyHash: 33,
-  scriptHash: 22,
+  pubKeyHash: 0x1e,
+  scriptHash: 0x16,
   wif: 0x9e,
 };
+
+
+export const dogecoinTestnet: Network = {
+  messagePrefix: '\x19Dogecoin Signed Message:\n',
+  bech32: 'tdoge',
+  bip32: {
+    public: 0x043587cf, // 0x02facafd, TODO: check this
+    private: 0x04358394, // 0x02fac398, TODO: check this
+  },
+  pubKeyHash: 0x71, // 0x1e, TODO: check this
+  scriptHash: 0xc4, // 0x16, TODO: check this 
+  wif: 0xef, // 0x9e, TODO: check this
+};
+
